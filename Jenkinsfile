@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Get Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/adrzio789/Frontend.git'
+                checkout scm
             }
         }
 
