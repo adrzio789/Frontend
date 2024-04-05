@@ -1,4 +1,4 @@
-def imageName="adrzio789/backend"
+def imageName="adrzio789/frontend"
 def dockerTag=""
 def dockerRegistry=""
 def registryCredentials="dockerhub"
