@@ -58,9 +58,9 @@ pipeline {
             steps {
                 dir('ArgoCD') {
                     withCredentials([gitUsernamePassword(credentialsId: 'git', gitToolName: 'Default')]) {
-                        git branch: 'main', url: 'https://github.com/Panda-Academy-Core-2-0/ArgoCD.git'
+                        git branch: 'main', url: 'https://github.com/adrzio789/ArgoCD.git'
                         sh """ cd frontend
-                        sed -i "s#$imageName.*#$imageName:$dockerTag#g" deployment.yaml
+                        sed -i "s#$imageName.*#$imageName:$dockerTag#g" frontend.yaml
                         git commit -am "Set new $dockerTag tag."
                         git push origin main
                         """
